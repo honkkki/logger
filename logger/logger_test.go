@@ -1,15 +1,14 @@
-package test
+package logger
 
 import (
 	"fmt"
-	"github.com/honkkki/go-logger/logger/logger"
 	"testing"
 	"time"
 )
 
 func TestFileLogger(t *testing.T) {
 	fmt.Println("test file logger")
-	log := logger.NewFileLogger("../log_file", "test", 1000)
+	log := NewFileLogger("../log_file", "test", 1000)
 	defer log.Close()
 	log.Debug("log debug")
 	log.Info("log info")
@@ -23,6 +22,6 @@ func TestFileLogger(t *testing.T) {
 }
 
 func TestConsoleLogger(t *testing.T) {
-	log := logger.NewConsoleLogger()
+	log := NewConsoleLogger()
 	log.Debug("log console debug")
 }
