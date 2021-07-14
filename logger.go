@@ -15,7 +15,7 @@ func init() {
 	config["type"] = "file"
 	config["fp"] = "./log_file"
 	config["fn"] = fmt.Sprintf("%04d%02d%02d", now.Year(), now.Month(), now.Day())
-	config["log_chan_size"] = "1000"
+	config["log_chan_size"] = "100"
 }
 
 func InitLogger() {
@@ -23,7 +23,7 @@ func InitLogger() {
 	case "file":
 		chanSize, err := strconv.Atoi(config["log_chan_size"])
 		if err != nil {
-			chanSize = 1000
+			chanSize = 100
 		}
 		logger = NewFileLogger(config["fp"], config["fn"], chanSize)
 	case "console":

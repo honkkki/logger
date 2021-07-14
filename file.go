@@ -103,6 +103,7 @@ func (f *FileLogger) Error(args ...interface{}) {
 	}
 }
 
+// Close signal notify close
 func (f *FileLogger) Close() {
 	f.file.Close()
 }
