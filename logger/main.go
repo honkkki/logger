@@ -1,7 +1,7 @@
 package main
 
 import (
-	"go-practice/logger/logger"
+	"github.com/honkkki/go-logger/logger/logger"
 	"log"
 	"net/http"
 )

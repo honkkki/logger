@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"go-practice/logger/logger"
+	"github.com/honkkki/go-logger/logger/logger"
 	"testing"
 	"time"
 )
